@@ -21,8 +21,12 @@ var Fn = {
 
 $("#btnvalidar").click(function(){
 	if (Fn.validaRut( $("#txt_rut").val() )){
-		$("#msgerror").html("El rut ingresado es válido :D");
+		$("#msgerror").html("El rut ingresado es válido");
+    // $("#msgerror").css("color", "green");
+    $("#msgerror").removeClass("text-danger").addClass("text-success");
 	} else {
-		$("#msgerror").html("El Rut no es válido :'( ");
+		$("#msgerror").html("El Rut no es válido");
+    // $("#msgerror").css("color", "red");
+    $("#msgerror").removeClass("text-success").addClass("text-danger");
 	}
 });
